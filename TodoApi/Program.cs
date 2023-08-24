@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 // 將 DbContext 新增至 DI 容器。
-// 指定 DbContext 將會使用記憶體內部資料庫。
+// UseInMemoryDatabase 指定 DbContext 使用內存儲存資料。
 builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
